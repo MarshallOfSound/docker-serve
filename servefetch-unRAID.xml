@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video</Category>
+  <Date>2018-09-07</Date>
+  <Changes>Everything is Awesome</Changes>
+  <Name>Serve Fetch</Name>
+  <Support>https://github.com/MarshallOfSound/docker-serve/issues</Support>
+  <Description>
+    [b]Serve Fetch[/b][br][br]
+ 
+    Docker image for LFTP sync for unRAID[br][br]
+
+    You should mount your target directories at "/media/{YOUR_DIR}"
+  </Description>
+  <Project>https://github.com/MarshallOfSound/docker-serve</Project>
+  <Registry>https://hub.docker.com/r/marshallofsound/serve-fetch/</Registry>
+  <Repository>marshallofsound/serve-fetch</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>SERVE_USER</Name>
+      <Value>http username</Value>
+    </Variable>
+    <Variable>
+      <Name>SERVE_PASSWORD</Name>
+      <Value>http password</Value>
+    </Variable>
+    <Variable>
+      <Name>FILEBOT_URL</Name>
+      <Value>url to trigger filebot sync</Value>
+    </Variable>
+    <Variable>
+      <Name>SERVE_URL</Name>
+      <Value>base url of serve</Value>
+    </Variable>
+    <Variable>
+      <Name>CRYPTO_KEY</Name>
+      <Value>the encryption key serve is using</Value>
+    </Variable>
+    <Variable>
+      <Name>SYNC_DIRS</Name>
+      <Value>comma separated list of top level dirs to sync from serve</Value>
+    </Variable>
+    <Variable>
+      <Name>RT_URL</Name>
+      <Value>rtorrent endpoint</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/serve-fetch</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/MarshallOfSound/docker-lftp-sync/master/logo.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>

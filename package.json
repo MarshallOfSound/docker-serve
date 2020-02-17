@@ -1,0 +1,15 @@
+{
+  "name": "serve",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@electorrent/node-rtorrent": "^1.2.1",
+    "fastify": "^2.12.0",
+    "glob": "^7.1.6",
+    "got": "^10.5.7",
+    "mkdirp": "^1.0.3",
+    "progress-stream": "^2.0.0",
+    "raw-body": "^2.4.1"
+  }
+}
