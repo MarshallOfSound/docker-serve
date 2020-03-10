@@ -24,4 +24,4 @@ RUN touch /var/log/lftp.log
 
 RUN mkdir -p /media
 
-CMD printenv | sed 's/^\(.*\)$/export \1/g' | sed 's/=\(.*\)/="\1"/' > /env.sh && cron && tail -f /var/log/cron.log
+CMD printenv | sed 's/^\(.*\)$/export \1/g' | sed 's/=\(.*\)/="\1"/' > /env.sh && cron && rm -f /config/synctorrent.lock && tail -f /var/log/cron.log
